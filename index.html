@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại</title>
+    <style>
+        fieldset{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="border: 2px solid black; width: 20%">
+        <legend>Mobile1</legend>
+        <p id="$status1"></p>
+        <p id="battery1" align="center">100</p>
+<!--        <textarea name="" id="Inbox1" cols="30" rows="10" placeholder="inbox"></textarea><br>-->
+<!--        <textarea name="" id="Outbox1" cols="30" rows="10" placeholder="outbox"></textarea><br>-->
+        <textarea id="message1" cols="30" rows="10" placeholder="Enter message here"></textarea>
+        <button onclick="mobile1.sendMessage(mobile2)">Send Message</button>
+        <button onclick="mobile1.showInbox()">Show Inbox</button>
+        <button onclick="mobile1.showOutbox()">Show Outbox</button>
+        <p id="inboxMessage1" style="color: red"></p>
+        <p id="outboxMessage1" style="color: gold"></p>
+    </fieldset>
+    <fieldset style="border: 2px solid black; width: 20%">
+    <legend>Mobile2</legend>
+        <p id="status2"></p>
+        <p id="battery2" align="center">100</p>
+<!--        <textarea name="" id="Inbox2" cols="30" rows="10" placeholder="inbox"></textarea><br>-->
+<!--        <textarea name="" id="Outbox2" cols="30" rows="10" placeholder="outbox"></textarea><br>-->
+        <textarea id="message2" cols="30" rows="10" placeholder="Enter message here"></textarea>
+        <button onclick="mobile2.sendMessage(mobile1)">Send Message</button>
+        <button onclick="mobile2.showInbox()">Show Inbox</button>
+        <button onclick="mobile2.showOutbox()">Show Outbox</button>
+        <p id="inboxMessage2" style="color: red"></p>
+        <p id="outboxMessage2" style="color: gold"></p>
+    </fieldset>
+    <script src="Mobile.js"></script>
+</body>
+</html>
